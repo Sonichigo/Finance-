@@ -1,0 +1,34 @@
+<h2>User details</h2>
+
+<div class="card card-header results-block">
+  <table class="col-md-12 friends-results">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @user.full_name %></td>
+        <td><%= @user.email %></td>
+        <td>
+          <% if current_user.can_track_friend?(@user) %>
+            <%= link_to 'Add friend', 
+              friendships_path(user: current_user,
+                friend: @user),
+              class: "btn btn-sm btn-success",
+              method: :post %>
+          <% else %>
+            <span class="badge badge-primary">
+              You are friends
+            </span>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<%= render 'users/stocks'%>

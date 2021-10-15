@@ -1,0 +1,31 @@
+@import 'bootstrap/dist/css/bootstrap';
+.search-area {
+    padding-top: 50px;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.results-block {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.logout-button {
+    margin-right: 5px;
+}
+
+.user-name {
+    margin: 3.5% 5px 0 0;
+}
+
+.friends-results {
+    td {
+        padding: 5px;
+    }
+}
